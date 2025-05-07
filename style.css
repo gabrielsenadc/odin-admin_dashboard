@@ -97,6 +97,59 @@ body {
     justify-self: right;
 }
 
+.header .notification {
+    display: grid;
+
+    grid-template-columns: 1fr 5vw 1fr;
+    align-items: center;
+
+    gap: 5%;
+}
+
+.header .notification svg{
+    width: max(15px, 2.5vw);
+    justify-self: end;
+}
+
+.header .notification img{
+    width: max(24px, 4vw);
+    border-radius: max(12px, 2vw);
+
+    justify-self: center;
+}
+
+.header .notification div{
+    font-size: max(10px, 1.5vw);
+}
+
+.header .user-info {
+    display: grid;
+
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1.5fr;
+
+    gap: 5%;
+}
+
+.header .user-info img{
+    --min: 80px;
+    --max: 120px;
+    width: clamp(var(--min), 7vw, var(--max));
+    border-radius: clamp(calc(var(--min) / 2), 3.5vw, calc(var(--max) / 2));
+
+    grid-row: 1 / 3;
+    justify-self: end;
+    align-self: center;
+}
+
+.header .user-info .hi{
+    align-self: end;
+}
+
+.header .user-info .name{
+    font-size: max(15px, 2.5vw);
+}
+
 .header .buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -111,7 +164,7 @@ body {
     border-radius: 10px;
     border: none;
     width: 90%;
-    padding: 5px 0;
+    padding: 1vh 0;
 
     text-align: center;
     color: white;
